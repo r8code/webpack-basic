@@ -39,7 +39,7 @@ const cssIdentifier = PRODUCTION ? '[hash:base64:10]' : '[path][name]---[local]'
 
 const cssLoader = PRODUCTION
 	?	ExtractTextPlugin.extract({
-			loader: 'css-loader?minimize&localIdentName=' + cssIdentifier
+			use: 'css-loader?minimize&localIdentName=' + cssIdentifier
 		})
 	: 	['style-loader', 'css-loader?localIdentName=' + cssIdentifier];
 
